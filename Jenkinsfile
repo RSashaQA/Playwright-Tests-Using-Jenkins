@@ -18,18 +18,18 @@ agent any
         '''
       }
     }
-    stage('Publish') {
-        echo 'Publish Allure report'
-        publishHTML(
-                target: [
-                        allowMissing         : false,
-                        alwaysLinkToLastBuild: false,
-                        keepAll              : true,
-                        reportDir            : 'target/site/allure-maven-plugin',
-                        reportFiles          : 'index.html',
-                        reportName           : "Allure Report"
-                ]
-        )
-    }
-  }
+stage('reports') {
+    steps {
+    script {
+            allure([
+                    includeProperties: false,
+                    jdk: '',
+                    properties: [],
+                    reportBuildPolicy: 'ALWAYS',
+                    results: [[path: 'target/allure-results']]
+          
+}
+}
+}
+}
 }
