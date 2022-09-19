@@ -29,7 +29,7 @@ test('Тест добавление/удаление каналов из стр�
     //удаляем НТВ из избранных, через страницу канала
     await page.locator('text=НТВ').click();
     await page.waitForTimeout(2000)
-    await page.locator('text=ТЕЛЕКАНАЛ НТВ СМОТРЕТЬ ОНЛАЙН Телепрограмма >> img').nth(1).click()
+    await page.locator('#__layout > div > div.default__layout > div > div.stream__item > div.stream__title-container > div.stream__favorite-container > img').click()
     await page.waitForTimeout(2000)
     await page.locator('.login__button-arrow').click();
     await page.locator('text=Избранные').click();
@@ -37,7 +37,7 @@ test('Тест добавление/удаление каналов из стр�
     //удаляем ДОМАШНИЙ из избранных, через страницу канала
     await page.locator('text=Домашний').click();
     await page.waitForTimeout(2000)
-    await page.locator('text=ТЕЛЕКАНАЛ ДОМАШНИЙ СМОТРЕТЬ ОНЛАЙН Телепрограмма >> img').nth(1).click();
+    await page.locator('#__layout > div > div.default__layout > div > div.stream__item > div.stream__title-container > div.stream__favorite-container > img').click();
     await page.waitForTimeout(2000)
     await page.locator('header a:has-text("ТВ-каналы")').click();
 

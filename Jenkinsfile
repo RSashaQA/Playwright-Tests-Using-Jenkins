@@ -14,9 +14,19 @@ agent any
       steps {
         sh '''
           npx playwright test --list
-          npx playwright test
+          npx playwright test --workers 8
         '''
       }
+      stage('Reports') {
+        steps {
+           allure([
+      	   includeProperties: false,
+      	   jdk: '',
+      	   properties: [],
+      	   reportBuildPolicy: 'ALWAYS',
+      	   results: [[path: 'report']]
+    	   ])
+  	        }
       post {
         success {
           archiveArtifacts(artifacts: 'homepage-*.png', followSymlinks: false)
