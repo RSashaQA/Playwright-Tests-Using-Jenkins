@@ -14,7 +14,7 @@ agent any
       steps {
         sh '''
           npx playwright test --list
-          npx playwright test --workers 8
+          npx playwright test --workers 8 --browser firefox
         '''
       }
       }
@@ -28,12 +28,6 @@ agent any
       	   results: [[path: 'report']]
     	   ])
   	        }
-      }
-      post {
-        success {
-          archiveArtifacts(artifacts: 'homepage-*.png', followSymlinks: false)
-          sh 'rm -rf *.png'
-        }
       }
     }
   }
