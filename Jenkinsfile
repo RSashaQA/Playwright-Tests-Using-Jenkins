@@ -4,6 +4,7 @@ agent any
     stage('install playwright') {
       steps {
         sh '''
+          npm init playwright@latest
           npm i -D @playwright/test
           npx playwright install
         '''
