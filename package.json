@@ -1,0 +1,21 @@
+{
+  "name": "playwright-tests-using-jenkins",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RSashaQA/Playwright-Tests-Using-Jenkins.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RSashaQA/Playwright-Tests-Using-Jenkins/issues"
+  },
+  "homepage": "https://github.com/RSashaQA/Playwright-Tests-Using-Jenkins#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.25.2"
+  }
+}
