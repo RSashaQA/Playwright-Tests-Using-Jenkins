@@ -11,9 +11,9 @@ test('Тест смена вкладнок, ТВ-каналы, Кино, Под�
     //нажимаем на вкладку Кино, прорверяем, что VOD временно не доступен
     await page.locator('header a:has-text("Кино")').click();
     await page.waitForURL('https://limehd.tv/movies');
-    await page.waitForSelector('div > .default__layout > .container > .films__wrapper > .films__title')
-    const VODavalible = await page.innerText('div > .default__layout > .container > .films__wrapper > .films__title');
-    expect(VODavalible).toBe('Онлайн-кинотеатр скоро...');
+    await page.waitForSelector('text=Популярные');
+    await page.waitForSelector('text=Фильмы');
+    await page.waitForSelector('text=Сериалы');
 
     //нажимаем на вкладку Подписки, 
     await page.locator('header ul >> text=Подписки').click();
@@ -32,11 +32,11 @@ test('Тест смена вкладнок, ТВ-каналы, Кино, Под�
         await page.isVisible('.packs__list > li:nth-child(' + i + ') > .packs__item-container > .packs__item > .pack__container')
     } while (i < 15)
 
-    //нажимаем на вкладку "ТВ-приставки", проверяем, что открывается дополнительная страница
-    const [page1] = await Promise.all([
-        page.waitForEvent('popup'),
-        page.locator('header a:has-text("ТВ-приставки")').click()
-    ]);
+    // //нажимаем на вкладку "ТВ-приставки", проверяем, что открывается дополнительная страница
+    // const [page1] = await Promise.all([
+    //     page.waitForEvent('popup'),
+    //     page.locator('header a:has-text("ТВ-приставки")').click()
+    // ]);
 })
 
 

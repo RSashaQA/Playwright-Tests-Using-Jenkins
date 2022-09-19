@@ -30,9 +30,9 @@ test('проверка наличия ЕПГ на первом и втором �
             await page.waitForSelector('.page-main > .stream__item > .stream__current-program > .current-program__title-container > .current-program__time', {state: 'visible', timeout:1000})
 
             //нажимаем на "Телепрограмма, проверяем наличие хотябы 1 телепрограмма"
-            await page.click('.page-main > .stream__item > .stream__title-container > .stream__button-container > .stream__button', {timeout: 1000})
-            await page.waitForSelector('.main__content > .main__wrapper > .epg__list > li:nth-child(1) > .epg__item', {timeout: 1000})
+            // await page.click('.page-main > .stream__item > .stream__title-container > .stream__button-container > .stream__button', {timeout: 1000})
+            // await page.waitForSelector('.main__content > .main__wrapper > .epg__list > li:nth-child(1) > .epg__item', {timeout: 1000})
         } catch (err) { console.log('EPG for channel # ' + i + ' missing') };
-        await page.locator('text=Закрыть').click();
+        // await page.locator('text=Закрыть').click();
     } while (i < 21)
 })
