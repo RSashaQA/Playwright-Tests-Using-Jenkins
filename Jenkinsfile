@@ -17,17 +17,14 @@ agent any
           npx playwright test --workers 8 --project=chromium
         '''
       }
-      }
+    }
       stage('Reports') {
         steps {
-           allure([
-      	   includeProperties: false,
-      	   jdk: '',
-      	   properties: [],
-      	   reportBuildPolicy: 'ALWAYS',
-      	   results: [[path: 'report']]
-    	   ])
-  	        }
-      }
+          allure
+          includeProperties: false,
+          jdk: '',
+          results: [[path: 'allure-results']]
+  	  }
     }
   }
+}
