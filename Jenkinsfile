@@ -21,7 +21,7 @@ agent any
       stage('Reports') {
         steps {
           allure
-          includeProperties: false,
+          includeProperties: true,
           jdk: '',
           results: [[path: 'allure-results']]
   	  }
