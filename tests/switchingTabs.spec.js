@@ -11,7 +11,7 @@ test('Тест смена вкладнок, ТВ-каналы, Кино, Под�
     //нажимаем на вкладку Кино, прорверяем, что VOD временно не доступен
     await page.locator('header a:has-text("Кино")').click();
     await page.waitForURL('https://limehd.tv/movies');
-    await page.waitForSelector('text=Популярные');
+    await page.waitForSelector('text=Популярное');
     await page.waitForSelector('text=Фильмы');
     await page.waitForSelector('text=Сериалы');
 
