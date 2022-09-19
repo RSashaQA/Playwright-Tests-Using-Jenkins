@@ -21,7 +21,6 @@ agent any
         steps {
            allure([
       	   includeProperties: false,
-      	   jdk: '',
       	   properties: [],
       	   reportBuildPolicy: 'ALWAYS',
       	   results: [[path: 'report']]
