@@ -27,7 +27,7 @@ stage('reports') {
                     properties: [],
                     reportBuildPolicy: 'ALWAYS',
                     results: [[path: 'target/allure-results']]
-          
+            ])
 }
 }
 }
