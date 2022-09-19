@@ -6,6 +6,7 @@ agent any
         sh '''
           npm init playwright@latest
           npm i -D @playwright/test
+          npm install fs-extra
           npx playwright install
         '''
       }

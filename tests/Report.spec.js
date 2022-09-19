@@ -1,6 +1,6 @@
 const { test, expect } = require('@playwright/test');
 
-const userNameReport = ('testdeleteme@limehd.tv')
+const userNameReport = ('testdeleteme@test.test')
 
 test('Регистрация тестового аккаунта', async ({ page }) => {
 
@@ -16,7 +16,7 @@ test('Trouble report check', async ({ page }) => {
 
     await page.goto('https://limehd.tv/login')
 
-    //авторизация, используя данные от аккаунта testdeleteme@limehd.tv
+    //авторизация, используя данные от аккаунта testdeleteme@test.test
     await page.locator('[placeholder="Введите e-mail"]').fill(userNameReport);
     await page.locator('input[type="password"]').fill('qqqqqq');
     await page.locator('text=Войти').click();

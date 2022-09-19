@@ -6,9 +6,9 @@ function getRandomInt(max) {
 
 test.setTimeout(120000)
 
-const userNameRegWebkit = ('testdeleteme' + getRandomInt(999999999) + '@limehd.tv') //не забыть подчищать созданные аккаунты
-const userNameRegFirefox = ('testdeleteme' + getRandomInt(999999999) + '@limehd.tv')
-const userNameRegChromium = ('testdeleteme' + getRandomInt(999999999) + '@limehd.tv')
+const userNameRegWebkit = ('testdeleteme' + getRandomInt(999999999) + '@test.test') //не забыть подчищать созданные аккаунты
+const userNameRegFirefox = ('testdeleteme' + getRandomInt(999999999) + '@test.test')
+const userNameRegChromium = ('testdeleteme' + getRandomInt(999999999) + '@test.test')
 
 test('Тест регистрации, проверка текста ошибок около полей ввода. Успешная регистрация', async () => {
 

@@ -6,9 +6,9 @@ function getRandomInt(max) {
 
 test.setTimeout(120000)
 
-const userNameFavWebkit = ('testdeleteme' + getRandomInt(666999666) + '@limehd.tv') //не забыть подчищать созданные аккаунты
-const userNameFavFirefox = ('testdeleteme' + getRandomInt(666999666) + '@limehd.tv')
-const userNameFavChromium = ('testdeleteme' + getRandomInt(666999666) + '@limehd.tv')
+const userNameFavWebkit = ('testdeleteme' + getRandomInt(666999666) + '@test.test') //не забыть подчищать созданные аккаунты
+const userNameFavFirefox = ('testdeleteme' + getRandomInt(666999666) + '@test.test')
+const userNameFavChromium = ('testdeleteme' + getRandomInt(666999666) + '@test.test')
 const passwordFav = ('qqqqqq')
 const newPassword = ('wwwwww')
 

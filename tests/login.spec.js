@@ -1,6 +1,6 @@
 const { test, expect } = require('@playwright/test');
 
-let userNameLogin = 'testdeleteme@limehd.tv'
+let userNameLogin = 'testdeleteme@test.test'
 
 test.setTimeout(120000)
 
@@ -34,7 +34,7 @@ test('авторизаяция, плохой сценарий', async ({ page })
 test('авторизаяция, неверный email или пароль', async ({ page }) => {
     await page.goto('https://limehd.tv/login');
 
-    //вводим неправильные данные от аккаунта testdeleteme@limehd.tv и пытаемся войти
+    //вводим неправильные данные от аккаунта testdeleteme@test.test и пытаемся войти
     await page.locator('[placeholder="Введите e-mail"]').fill(userNameLogin);
     await page.locator('input[type="password"]').fill('qqqqq');
     await page.locator('text=Войти').click();
@@ -47,7 +47,7 @@ test('авторизация, хороший сценарий', async ({ page })
 
     await page.goto('https://limehd.tv/login');
 
-    //авторизация, используя корректные данные от аккаунта testdeleteme@limehd.tv
+    //авторизация, используя корректные данные от аккаунта testdeleteme@test.test
     await page.locator('[placeholder="Введите e-mail"]').fill(userNameLogin);
     await page.locator('input[type="password"]').fill('qqqqqq');
     await page.locator('text=Войти').click();
