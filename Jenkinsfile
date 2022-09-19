@@ -14,7 +14,7 @@ agent any
       steps {
         sh '''
           npx playwright test --list
-          npx playwright test --workers 8 --browser firefox
+          npx playwright test --workers 8 --project=chromium
         '''
       }
       }
