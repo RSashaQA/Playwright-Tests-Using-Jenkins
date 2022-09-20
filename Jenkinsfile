@@ -12,7 +12,7 @@ pipeline {
     stage('test') {
       steps {
         sh '''
-          npx playwright test EPG20test.spec.js --workers 1 --project=chromium
+          npx playwright test --workers 4 --project=chromium
         '''
       }
     }
