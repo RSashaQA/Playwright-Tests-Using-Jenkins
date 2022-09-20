@@ -18,10 +18,9 @@ agent any
         '''
       }
     }
-  }
-  stage('reports') {
-    steps {
-    script {
+    stage('reports') {
+      steps{
+          script {
             allure([
                     includeProperties: false,
                     jdk: '',
@@ -31,5 +30,6 @@ agent any
             ])
     }
     }
+}
 }
 }
