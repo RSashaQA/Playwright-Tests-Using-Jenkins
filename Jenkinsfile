@@ -1,6 +1,6 @@
 pipeline {
 agent any
-    tools {maven 'Maven'}
+    tools {maven 'maven'}
   stages {
     stage('Prepare playwright') {
       steps {
