@@ -1,1 +1,1 @@
-[{"uid":"db6f77d4148cabf5","name":"Тест переключение между категориями каналов","time":{"start":1663700034376,"stop":1663700052545,"duration":18169},"status":"passed","severity":"normal"}]
+[{"uid":"40c3eabe7af7954d","name":"homepage has Playwright in title and get started link linking to the intro page","time":{"start":1663703368607,"stop":1663703373193,"duration":4586},"status":"passed","severity":"normal"}]

@@ -1,7 +1,7 @@
 pipeline {
   agent any
   stages {
-    stage('install playwright') {
+    stage('prepare playwright') {
       steps {
         sh '''
           npm i -D @playwright/test
