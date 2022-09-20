@@ -1,7 +1,7 @@
 pipeline {
 agent any
   stages {
-    stage('install playwright') {
+    stage('Prepare playwright') {
       steps {
         sh '''
           npm i -D @playwright/test
@@ -14,23 +14,20 @@ agent any
       steps {
         sh '''
           npx playwright test --list
-          npx playwright test categories.spec.js --workers 1 --project=chromium
+          npx playwright test example.spec.js --workers 1 --project=chromium
         '''
       }
     }
-stage('reports') {
-    steps {
-    script {
-            allure([
+  }
+      post {
+        always { 
+                allure([
                     includeProperties: false,
                     jdk: '',
                     properties: [],
                     reportBuildPolicy: 'ALWAYS',
                     results: [[path: 'target/allure-results']]
-            ])
-            
-        }
-      }
+                  ])
     }
   }
 }
