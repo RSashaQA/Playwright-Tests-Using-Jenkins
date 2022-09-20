@@ -12,6 +12,7 @@ pipeline {
     stage('test') {
       steps {
         sh '''
+          npx playwright test --list
           npx playwright test --workers 4 --project=chromium
         '''
       }
