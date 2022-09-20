@@ -1,6 +1,5 @@
 pipeline {
 agent any
-    tools {maven 'maven'}
   stages {
     stage('Prepare playwright') {
       steps {
@@ -22,13 +21,15 @@ agent any
   }
       post {
         always { 
-                allure([
-                    includeProperties: false,
-                    jdk: '',
-                    properties: [],
-                    reportBuildPolicy: 'ALWAYS',
-                    results: [[path: 'target/allure-results']]
-                  ])
+                publishHTML([
+                allowMissing: false,
+                alwaysLinkToLastBuild: true,
+                keepAll: true,
+                reportDir: 'playwright-report',
+                reportFiles: "index.html",
+                reportName: "report",
+                reportTitles: "title"
+                ])
     }
   }
 }
