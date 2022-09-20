@@ -18,18 +18,18 @@ agent any
         '''
       }
     }
-    stage('Make report') {
-            steps {
-                publishHTML([
-                            allowMissing: false,
-                            alwaysLinkToLastBuild: true,
-                            keepAll: true,
-                            reportDir: 'playwright-report',
-                            reportFiles: 'index.html',
-                            reportName: "aggregated",
-                            reportTitles: 'REPORT_TITLES'
-                        ])
-            }
-}
   }
+  stage('reports') {
+    steps {
+    script {
+            allure([
+                    includeProperties: false,
+                    jdk: '',
+                    properties: [],
+                    reportBuildPolicy: 'ALWAYS',
+                    results: [[path: 'target/allure-results']]
+            ])
+    }
+    }
+}
 }
