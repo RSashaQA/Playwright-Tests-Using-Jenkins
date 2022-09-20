@@ -18,8 +18,7 @@ agent any
         '''
       }
     }
-  }
-  stage('Make report') {
+    stage('Make report') {
             steps {
                 publishHTML([
                             allowMissing: false,
@@ -32,4 +31,5 @@ agent any
                         ])
             }
 }
+  }
 }
