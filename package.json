@@ -16,7 +16,9 @@
   },
   "homepage": "https://github.com/RSashaQA/Playwright-Tests-Using-Jenkins#readme",
   "devDependencies": {
-    "@playwright/test": "^1.25.2"
+    "@playwright/test": "^1.25.2",
+    "allure-commandline": "^2.18.1",
+    "experimental-allure-playwright": "^0.0.3"
   },
   "dependencies": {
     "fs-extra": "^10.1.0"

@@ -1,0 +1,2 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Tue Sep 20 21:53:54 MSK 2022","Tue Sep 20 21:54:12 MSK 2022","18169","chromium","categories.spec.js","","","","Тест переключение между категориями каналов",""
