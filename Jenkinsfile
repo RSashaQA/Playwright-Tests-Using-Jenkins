@@ -19,17 +19,16 @@ agent any
       }
     }
   }
-      post {
-        always { 
+  stage('Make report') {
+            steps {
                 publishHTML([
-                allowMissing: false,
-                alwaysLinkToLastBuild: true,
-                keepAll: true,
-                reportDir: [[path: 'target/playwright-report']],
-                reportFiles: "index.html",
-                reportName: "report",
-                reportTitles: "title"
-                ])
-    }
-  }
+                            allowMissing: false,
+                            alwaysLinkToLastBuild: true,
+                            keepAll: true,
+                            reportDir: 'playwright-report',
+                            reportFiles: 'index.html',
+                            reportName: "aggregated",
+                            reportTitles: 'REPORT_TITLES'
+                        ])
+            }
 }
