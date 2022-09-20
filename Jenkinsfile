@@ -1,5 +1,6 @@
 pipeline {
 agent any
+tools {jdk "oracle-java-8"}
   stages {
     stage('Prepare playwright') {
       steps {
@@ -24,7 +25,8 @@ agent any
             allure([
                     includeProperties: false,
                     jdk: '',
-                    results: [[path: 'allure-results']]
+                    results: [[path: 'target/allure-results']]
+                    
             ])
     }
     }
