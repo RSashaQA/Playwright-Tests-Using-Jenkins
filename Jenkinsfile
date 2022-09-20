@@ -14,7 +14,7 @@ agent any
       steps {
         sh '''
           npx playwright test --list
-          npx playwright test --workers 8 --project=chromium
+          npx playwright test categories.spec.js --workers 1 --project=chromium
         '''
       }
     }
@@ -26,7 +26,7 @@ agent any
                     jdk: '',
                     properties: [],
                     reportBuildPolicy: 'ALWAYS',
-                    results: [[path: 'target/allure-results']]
+                    results: [[path: 'target/playwright-report']]
                   ])
         }
       }
