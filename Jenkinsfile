@@ -1,6 +1,5 @@
 pipeline {
 agent any
-tools {jdk "oracle-java-8"}
   stages {
     stage('Prepare playwright') {
       steps {
@@ -21,7 +20,6 @@ tools {jdk "oracle-java-8"}
     }
     stage('reports') {
       steps{
-          script {
             allure([
                     includeProperties: false,
                     jdk: '',
@@ -30,6 +28,5 @@ tools {jdk "oracle-java-8"}
             ])
     }
     }
-}
 }
 }
