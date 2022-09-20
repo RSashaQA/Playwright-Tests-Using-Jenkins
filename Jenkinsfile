@@ -1,12 +1,10 @@
 pipeline {
-agent any
-tools {maven "Maven"}
+  agent any
   stages {
-    stage('Prepare playwright') {
+    stage('install playwright') {
       steps {
         sh '''
           npm i -D @playwright/test
-          npm install fs-extra
           npx playwright install
         '''
       }
@@ -14,20 +12,16 @@ tools {maven "Maven"}
     stage('test') {
       steps {
         sh '''
-          npx playwright test --list
           npx playwright test example.spec.js --workers 1 --project=chromium
         '''
       }
+      post {
+        success {
+          archiveArtifacts(artifacts: 'homepage-*.png', followSymlinks: false)
+          sh 'rm -rf *.png'
+        }
+      }
     }
-    stage('reports') {
-      steps{
-            allure([
-                    includeProperties: false,
-                    jdk: '',
-                    results: [[path: '/target/allure-results']]
-                    
-            ])
-    }
-    }
+  }
 }
-}
+
