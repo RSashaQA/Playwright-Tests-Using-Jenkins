@@ -26,7 +26,7 @@ stage('reports') {
                     jdk: '',
                     properties: [],
                     reportBuildPolicy: 'ALWAYS',
-                    results: [[path: 'test -a/allure-results']]
+                    results: [[path: 'target/playwright-report']]
             ])
         }
       }
