@@ -26,7 +26,7 @@ stage('reports') {
                     jdk: '',
                     properties: [],
                     reportBuildPolicy: 'ALWAYS',
-                    results: [[path: 'target/allure-results']]
+                    results: [[path: 'test -a/allure-results']]
             ])
         }
       }
