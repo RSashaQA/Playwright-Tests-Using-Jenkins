@@ -25,7 +25,7 @@ agent any
                 allowMissing: false,
                 alwaysLinkToLastBuild: true,
                 keepAll: true,
-                reportDir: 'playwright-report',
+                reportDir: [[path: 'target/playwright-report']],
                 reportFiles: "index.html",
                 reportName: "report",
                 reportTitles: "title"
