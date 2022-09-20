@@ -23,10 +23,8 @@ agent any
           script {
             allure([
                     includeProperties: false,
-                    jdk: '',
-                    properties: [],
-                    reportBuildPolicy: 'ALWAYS',
-                    results: 'allure-results'
+                    jdk: 'JDK8',
+                    results: [[path: 'allure-results']]
             ])
     }
     }
