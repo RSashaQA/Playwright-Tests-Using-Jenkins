@@ -7,7 +7,6 @@ pipeline {
           npm i -D @playwright/test
           npx playwright install
           npm i -D experimental-allure-playwright
-          npm i -D allure-commandline
         '''
       }
     }
