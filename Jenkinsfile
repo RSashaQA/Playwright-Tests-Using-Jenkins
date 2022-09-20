@@ -25,7 +25,7 @@ tools {jdk "oracle-java-8"}
             allure([
                     includeProperties: false,
                     jdk: '',
-                    results: [[path: 'target/allure-results']]
+                    results: [[path: 'allure-results']]
                     
             ])
     }
