@@ -18,4 +18,6 @@ test('homepage has Playwright in title and get started link linking to the intro
   
   // Expects the URL to contain intro.
   await expect(page).toHaveURL(/.*intro/);
+
+  await page.screenshot({path: "123.png", fullPage:true});
 });
